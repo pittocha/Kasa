@@ -1,21 +1,4 @@
-$color-primary: #FF6060;
-$color-secondary: #000000;
 
-.navContainer {
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .navLink {
-    margin-right: 60px;
-    font-size: 26px;
-    text-decoration: none;
-    color: $color-primary;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 .App {
   text-align: center;

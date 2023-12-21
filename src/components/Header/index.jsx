@@ -1,9 +1,10 @@
 import logo from '../../assets/Logo.png'
 import { Link } from 'react-router-dom'
+import '../../utils/style/Header.scss';
 
 function Header () {
 
-    return [
+    return (
         <div className='navContainer'>
             <Link to="/">
                 <img src={logo} className='logo' alt='logo kasa' />
@@ -13,7 +14,7 @@ function Header () {
                 <Link to="/About" className='navLink'>A Propos</Link>
             </div>
         </div>
-    ]
+    )
 }
 
 export default Header
