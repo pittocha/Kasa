@@ -1,0 +1,18 @@
+@import 'colors';
+
+.ErrorWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $color-primary;
+    margin-top: -50px;
+    margin-bottom: 100px;
+    font-size: 26px;
+    .error-404 {
+        font-style: bold;
+        font-size: 200px;
+    }
+    .homeLink {
+        color: $color-primary;
+    }
+}

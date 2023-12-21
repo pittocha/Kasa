@@ -1,0 +1,15 @@
+@import 'colors';
+
+.FooterContainer {
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    .footerLogo {
+        width: 123px;
+        height: 41;
+    }
+}

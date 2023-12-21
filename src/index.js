@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './index.css';
-import App from './pages/home/index';
+import Home from './pages/home/index';
 import Header from './components/Header';
+import Error from './components/Error';
+import Footer from './components/Footer';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -11,7 +13,11 @@ ReactDOM.render(
   <React.StrictMode>
   <Router>
     <Header />
-    <App />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
+    <Footer />
   </Router>
   </React.StrictMode>,
 document.getElementById('root')
