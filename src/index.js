@@ -5,6 +5,7 @@ import './index.css';
 import Home from './pages/home/index';
 import Header from './components/Header';
 import Error from './components/Error';
+import About from './pages/about'
 import Footer from './components/Footer';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,6 +17,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Error />} />
+      <Route path="/about" element={<About />} />
     </Routes>
     <Footer />
   </Router>
