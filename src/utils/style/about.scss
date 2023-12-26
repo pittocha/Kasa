@@ -12,43 +12,4 @@
         object-fit: cover;
     }
 }
-.section-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 15%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    color: white;
-    background-color: $color-primary;
-    width: 75%;
-    .section-titie {
-        margin-left: 15px;
-        font-weight: 350;
-    }
-    .toggle-button {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        transition: transform 330ms ease-in-out;
-        &.up {
-            &:active {
-                transform: rotate(180deg);
-            }
-        }
-        &.down {
-            transform: rotate(180deg);
-            &:active {
-                transform: rotate(0deg);
-            }
-        }
-    }
-}
-.section-content {
-    display: flex;
-    color: $color-primary;
-    justify-content: center;
-    margin-right: 15%;
-    margin-left: 17%;
-}
+
