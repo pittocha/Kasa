@@ -1,7 +1,8 @@
 import React from 'react';
 import data from '../../assets/logements.json';
-import { useParams, } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Collapsible from '../../components/collapse';
+import Caroussel from '../../components/caroussel';
 import '../../utils/style/logement.scss'
 
 function Logement() {
@@ -9,11 +10,16 @@ function Logement() {
     const logement = data.find((item) => item.id === id)
     
     if (!logement) {
-        return ("*");
+        return <Navigate to='*' />;
     }
     return (
         <div>
+        <div>
+            <Caroussel pictures={logement.pictures} />
+        </div>
         <h1>{logement.title}</h1>
+        <p>{logement.location}</p>
+        <p>{logement.tags}</p>
         <div>
         <Collapsible label="Description">{logement.description}</Collapsible>
         <Collapsible label="Équipements">
