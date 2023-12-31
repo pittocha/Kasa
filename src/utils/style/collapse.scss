@@ -6,7 +6,6 @@
     justify-content: space-between;
     margin-left: 15%;
     margin-top: 30px;
-    margin-bottom: 30px;
     border-radius: 10px;
     color: white;
     background-color: $color-primary;
@@ -15,7 +14,6 @@
         margin-left: 15px;
         font-weight: 350;
     }
-    
     .toggle-button {
         border: none;
         background-color: transparent;
@@ -34,10 +32,4 @@
         }
     }
 }
-.section-content {
-    display: flex;
-    color: $color-primary;
-    justify-content: center;
-    margin-right: 15%;
-    margin-left: 17%;
-}
+

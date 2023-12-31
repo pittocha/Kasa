@@ -6,20 +6,22 @@ import '../../utils/style/collapse.scss'
 const Collapsible =(props)=>{
 
     const [open, setOpen] = useState(false);
+    const [arrowDirection, setArrowDirection] = useState('up')
     const toggle = () => {
         setOpen(!open);
     };
-    
+    const toggleArrowDirection = () => {
+        setArrowDirection(arrowDirection === 'up' ? 'down' : 'up');
+    };
 
     return(
         <div>
         <div className="section-header">
         <h2 className='section-titie'>{props.label}</h2>
-        <button className="toggle-button" onClick={toggle}><img src={arrow} alt="fléche" /></button>
+        <button className={`toggle-button ${arrowDirection}`} onClick={() =>{toggleArrowDirection(); toggle()}}><img src={arrow} alt="fléche" /></button>
         </div>
-        {open &&
-        <div className="section-content">{props.children}</div>
-        }
+        
+        <div className={`section-content ${open ? 'open' : ''}`}>{props.children}</div>
         </div>
     )
 }

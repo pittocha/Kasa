@@ -1,15 +1,21 @@
-import Bannière from '../../assets/IMG.png'
-import '../../utils/style/banner.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../../utils/style/banner.scss';
 
 
-function Banner() {
+const Banner = ({imageUrl, title}) => {
 
     return (
         <div className='banner'>
-            <img src={Bannière} className='banner-img' alt='bannière' />
-            <div className='banner-title'>Chez vous, partout et ailleurs</div>
+            <img src={imageUrl} className='banner-img' alt='bannière' />
+            <div className='banner-title'>{title}</div>
         </div>
         )
+}
+
+Banner.propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
 }
 
 export default Banner
