@@ -12,4 +12,29 @@
         object-fit: cover;
     }
 }
-
+.section-content {
+    display: flex;
+    color: $color-primary;
+    justify-content: center;
+    margin-right: 10%;
+    margin-left: 15%;
+    max-height: 0;
+    background-color: #ebebeb;
+    overflow: hidden;
+}
+.section-content.open {
+    margin-left: 15%;
+    width: 75%;
+    background-color: #ebebeb;
+    max-height: 300px;
+    animation-duration: 0.8s;
+    animation-name: slideout;
+}
+@keyframes slideout {
+    from {
+        margin-top: -3%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
