@@ -8,7 +8,8 @@ function About() {
     return (
       <div >
         <Banner imageUrl={image2} title='' />
-      <Collapsible label="Fiabilité">
+      <div>
+      <Collapsible label="Fiabilité" width="80%">
         Les annonces postées sur Kasa garantissent une fiabilité totale. Lesphotos sont conformes aux logements,
          et toutes les informations sont régulièrement vérifiées par nos équipes.
       </Collapsible>
@@ -27,6 +28,7 @@ function About() {
         vérifier que les standart sont bien respectés. Nous organisons également des ateliers 
         sur la sécurité domestique pour nos hôtes.
       </Collapsible>
+      </div>
       </div>
     )
   }

@@ -14,14 +14,16 @@ function Logement() {
     }
     return (
         <div>
-        <div>
+        <div className='caroussel'>
             <Caroussel pictures={logement.pictures} />
         </div>
-        <h1>{logement.title}</h1>
-        <p>{logement.location}</p>
-        <p>{logement.tags}</p>
-        <div>
-        <Collapsible label="Description">{logement.description}</Collapsible>
+        <h1 className='logement-title'>{logement.title}</h1>
+        <div className='location'>{logement.location}</div>
+        <div className='tags'>
+        {logement.tags}
+        </div>
+        <div className='deroulant'>
+        <Collapsible label="Description" width="45%">{logement.description}</Collapsible>
         <Collapsible label="Équipements">
         <ul>
             {logement.equipments.map((equipment, index) => (
