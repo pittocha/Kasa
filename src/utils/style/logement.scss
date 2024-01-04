@@ -1,0 +1,36 @@
+@import "colors";
+
+h1{
+    padding-left: 10%;
+    color: $color-primary;
+    font-weight: 500;
+}
+.location{
+    padding-left: 10%;
+    color: $color-primary;
+}
+.tags{
+    display: flex;
+    padding-left: 10%;
+    margin-top: 15px;
+    background-color: $color-primary;
+    color: white;
+    width: fit-content;
+}
+.deroulant {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+    .section-header{
+        margin-left: 0;
+    }
+    .section-content{
+
+        margin-left: 0;
+    }
+    ul li{
+        list-style-type: none;
+    }
+}

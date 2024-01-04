@@ -15,7 +15,7 @@ const Collapsible =(props)=>{
     };
 
     return(
-        <div>
+        <div className="collapsible-content">
         <div className="section-header">
         <h2 className='section-titie'>{props.label}</h2>
         <button className={`toggle-button ${arrowDirection}`} onClick={() =>{toggleArrowDirection(); toggle()}}><img src={arrow} alt="fléche" /></button>

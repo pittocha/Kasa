@@ -7,6 +7,7 @@
   gap: 16px;
   justify-items: center;
   padding-top: 50px;
+  
   .card {
     width: 340px;
     height: 340px;
@@ -17,14 +18,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 20px;    
   }
   .card-title {
     position: absolute;
-    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 95%;
+    bottom: 17px;
     padding: 8px;
-    color: $color-primary;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    font-size: 18px
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    box-shadow: inset 0px -90px 60px -50px rgba(0, 0, 0, 0.5); 
   }
 };

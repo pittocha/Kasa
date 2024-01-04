@@ -16,15 +16,15 @@
     display: flex;
     color: $color-primary;
     justify-content: center;
-    margin-right: 10%;
+    width: 100%;
     margin-left: 15%;
     max-height: 0;
     background-color: #ebebeb;
     overflow: hidden;
 }
 .section-content.open {
-    margin-left: 15%;
-    width: 75%;
+
+    width: 100%;
     background-color: #ebebeb;
     max-height: 300px;
     animation-duration: 0.8s;
@@ -37,4 +37,41 @@
     to {
         margin-top: 0%;
     }
+}
+.collapsible-content{
+    margin-left: 8%;
+    margin-right: 8%;
+    width: 80%;
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: $color-primary;
+
+    .section-titie {
+        margin-left: 15px;
+        font-weight: 350;
+    }
+    .toggle-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 330ms ease-in-out;
+        &.up {
+            &:active {
+                transform: rotate(180deg);
+            }
+        }
+        &.down {
+            transform: rotate(180deg);
+            &:active {
+                transform: rotate(0deg);
+            }
+        }
+    }
+}
 }
