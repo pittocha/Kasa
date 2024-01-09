@@ -1,3 +1,20 @@
 @import 'colors';
 
-
+.section-content {
+    display: flex;
+    color: $color-primary;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    max-height: 0;
+    background-color: #ebebeb;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+}
+.section-content.open {
+    width: 100%;
+    background-color: #ebebeb;
+    margin-left: 0;
+    max-height: 300px;
+    transition-delay: 0.1s;
+}
