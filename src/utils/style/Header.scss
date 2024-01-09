@@ -15,3 +15,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 10px;
+    .navLink{
+      margin-right: 5px;
+      font-size: 18px;
+    }
+    .logo {
+      height: 48px;
+    }
+  }
+}
