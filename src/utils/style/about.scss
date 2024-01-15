@@ -57,7 +57,7 @@
         transition: transform 330ms ease-in-out;
         &.up {
             &:active {
-                transform: rotate(180deg);
+                transform: rotate(-180deg);
             }
         }
         &.down {

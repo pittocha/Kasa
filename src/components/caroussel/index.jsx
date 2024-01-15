@@ -6,17 +6,18 @@ import '../../utils/style/caroussel.scss'
 
 const Caroussel = ({ pictures }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
+    //objet qui détermine le comportement de la flèche précédent
     const goToPrevious = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
     };
-
+    //objetqui détermine le comportement de la flèche suivant
     const goToNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
     };
+    
 
-    const shaowArrows = pictures.length > 1;
-    const showNumbering = pictures.length > 1;
+    const shaowArrows = pictures.length > 1;//objet pour masquer les flèches si il n'y à qu'une photo
+    const showNumbering = pictures.length > 1;//objet pour masquer le compteur d'image si il n'y à qu'une photo
 
     return (
         <div className="caroussel">
@@ -26,13 +27,15 @@ const Caroussel = ({ pictures }) => {
                 src={backward}
                 alt="précédent"
                 onClick={goToPrevious}
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer"}}
                 />
                 </button>
             )}
-
-            <img className="caroussel-img" src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-
+            <img 
+                className="caroussel-img" 
+                src={pictures[currentIndex]} 
+                alt={`Slide ${currentIndex + 1}`}
+            />
             {shaowArrows && (           
                 <button className="left"> <img
                 src={forward}
@@ -50,7 +53,7 @@ const Caroussel = ({ pictures }) => {
         </div>
     )
 }
-
+//utilisation de proptypes pour les images du caroussel
 Caroussel.propTypes = {
     pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
